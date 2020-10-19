@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 komponen - Intro ReactJS</title>
+</head>
+<body>
+    <!-- Buat id utk menampilkan hasil proses yg dilakukan ReactJS -->
+    <div id="hasil"></div>
+
+    <!-- Sematkan library reactJS yg diimport lewat CDN -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+        // tulis kode reactJS disini
+        function Bil(props){
+            return(
+                <p>
+                Bilangan 1 : {props.bil1}<br/>
+                Bilangan 2 : {props.bil2}<br/>
+                Bilangan 3 : {props.bil3}<br/>
+                Nilai maximum :{Math.max(props.bil1,props.bil2,props.bil3)}
+                </p>
+            );
+        }
+        function ElementHTML(){
+            return(
+                <div>
+                    <h1>Nilai Max</h1>
+                    <Bil  bil1="325" bil2="111" bil3="252"/>
+                    <Bil  bil1="10" bil2="20" bil3="30"/>
+                    <Bil  bil1="1" bil2="999" bil3="666"/>            
+                </div>
+            );
+        }
+
+        ReactDOM.render(<ElementHTML/>,hasil);
+    </script>
+</body>
+</html>

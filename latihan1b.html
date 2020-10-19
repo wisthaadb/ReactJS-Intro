@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1b - Intro ReactJS</title>
+</head>
+<body>
+    <!-- Buat id utk menampilkan hasil proses yg dilakukan ReactJS -->
+    <div id="hasil"></div>
+    <div id="root"></div>
+
+    <!-- Sematkan library reactJS yg diimport lewat CDN -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+        // tulis kode reactJS disini
+        const hasil = document.getElementById('hasil');
+        const elementHTML = <h1 align="center">Apa kabar dunia ...</h1>;
+        React.createElement(
+            'h1',{align:'center'},'Apa kabar dunia...'
+            
+        );
+
+        class Hello extends React.Component{
+            render(){
+                return <h1>Hello World</h1> 
+            };
+        }
+        ReactDOM.render(elementHTML,hasil);
+        ReactDOM.render(<Hello/>,document.getElementById('root'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 komponen - Intro ReactJS</title>
+</head>
+<body>
+    <!-- Buat id utk menampilkan hasil proses yg dilakukan ReactJS -->
+    <div id="hasil"></div>
+
+    <!-- Sematkan library reactJS yg diimport lewat CDN -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+        // tulis kode reactJS disini
+        hasil = document.getElementById('hasil');
+        const mhs ={
+            nim : 12345678,
+            nama : "Jojon Jumejon Thor",
+            gender : "pria",
+            umur : 120,
+            jurusan : "Informatika",
+            angkatan : 2021
+        }
+        
+        const elementHTML = (
+            <div>
+                <h1 align="center">Biodata Mahasiswa </h1>
+                <p>Nim : {mhs.nim}<br/>
+                    Nama : {mhs.nama}<br/>
+                    Gender : {mhs.gender} <br/>
+                    Umur : {mhs.umur}<br/>
+                    Jurusan : {mhs.jurusan}<br/> 
+                    Angkatan : {mhs.angkatan}</p>
+            </div>
+        );
+
+        ReactDOM.render(elementHTML,hasil);
+    </script>
+</body>
+</html>

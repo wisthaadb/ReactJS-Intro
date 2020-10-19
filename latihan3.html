@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 komponen - Intro ReactJS</title>
+</head>
+<body>
+    <!-- Buat id utk menampilkan hasil proses yg dilakukan ReactJS -->
+    <div id="hasil"></div>
+
+    <!-- Sematkan library reactJS yg diimport lewat CDN -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+        // tulis kode reactJS disini
+        hasil = document.getElementById('hasil');
+        const Segitiga ={
+            alas : 10,
+            tinggi : 20,
+        }
+        
+        const elementHTML = (
+            <div>
+                <h1 align="center">Hitung Luas Segitiga </h1>
+                <p>Alas : {Segitiga.alas}<br/>
+                    Tinggi : {Segitiga.tinggi}<br/>
+                    Luas : 0.5 x {Segitiga.alas} x {Segitiga.tinggi} ={0.5*Segitiga.alas*Segitiga.tinggi} cm <sup>2</sup></p>
+            </div>
+        );
+
+        ReactDOM.render(elementHTML,hasil);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 komponen - Intro ReactJS</title>
+</head>
+<body>
+    <!-- Buat id utk menampilkan hasil proses yg dilakukan ReactJS -->
+    <div id="hasil"></div>
+
+    <!-- Sematkan library reactJS yg diimport lewat CDN -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+        // tulis kode reactJS disini
+        function Mhs(props){
+            return(
+                <p>
+                NIM : {props.nim}<br/>
+                Nama : {props.nama}<br/>
+                Jenis Kelamin : {props.gender}<br/>
+                Umur : {props.umur}<br/>
+                Jurusan : {props.jurusan}<br/>
+                Angkatan : {props.angkatan}
+                </p>
+            );
+        }
+        function ElementHTML(){
+            return(
+                <div>
+                    <h1>Biodata Mahasiswa</h1>
+                    <Mhs 
+                    nim="002" 
+                    nama="John Thor" 
+                    gender = "pria"
+                    umur = {121}
+                    jurusan = "Informatika"
+                    angkatan = "2021" />
+
+                    <Mhs 
+                    nim="001" 
+                    nama="Pak Thor" 
+                    gender = "pria"
+                    umur = {122}
+                    jurusan = "Informatika"
+                    angkatan = "2021" />
+
+                    <Mhs 
+                    nim="002" 
+                    nama="Bu John Effendi" 
+                    gender = "wanita"
+                    umur = {123}
+                    jurusan = "Informatika"
+                    angkatan = "2021" />
+                </div>
+            );
+        }
+
+        ReactDOM.render(<ElementHTML/>,hasil);
+    </script>
+</body>
+</html>
