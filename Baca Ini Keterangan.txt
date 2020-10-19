@@ -1,0 +1,4 @@
+Folder src merupakan folder hasil dari reactjs yang berisi hasil tugas menerapkan bootstrap pada reactjs.
+  - File utama dalam pengerjaan tugas ini adalah App.js yang melakukan import dari Jumbotron.js, Navigation.js, About.js, Sublink.js, Konten.js, Footer.js
+
+File .html Latihan 1-7 Merupakan file hasil kegiatan pertemuan 16 Intro ReactJS.
